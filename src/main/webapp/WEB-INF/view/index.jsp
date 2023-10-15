@@ -8,5 +8,8 @@
 </head>
 <body>
 	<h1>Hi ${data}</h1>
+	<div style="width: 150p; height: 100px">
+		<img style="width: 100%;" src="/202012072253057289_d.jpg">
+	</div>
 </body>
 </html>

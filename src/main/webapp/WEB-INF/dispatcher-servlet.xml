@@ -6,8 +6,13 @@
 		https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/mvc
 		https://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
-	<bean id="/index" class="webprj.IndexController"/>
+	
+	<!-- HandlerMapping, HandlerAdapter를 빈으로 등록 해줌 -->
+	<!-- JSON,XML 등 요청/응답 처리를 위한 모듈이나 데이터 바인딩 처리를 위한 ConversionServie를 빈 등록 -->
+	<mvc:annotation-driven/>
+	<!-- URL 패턴이 없을 경우 디폴트 서블릿에게 요청을 전달함 -->
+	<!-- 차이는 HTTP 에러 메서지에 설명란에 내용이 추가됨 -->
+	<mvc:default-servlet-handler/>
 	
 	<!-- viewResolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -18,5 +23,7 @@
 	<!-- 정적파일 허용-->
 	<!-- 매핑 : /** => /static/**로 매핑됨 -->
 	<mvc:resources location="/static/" mapping="/**"/>
+	
+	<bean class="webprj.IndexController"/>
 	
 </beans>

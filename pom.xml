@@ -9,14 +9,7 @@
   	<maven.complier.target>11</maven.complier.target>
   </properties>
   <dependencies>
-	  	<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-api -->
-		<dependency>
-		    <groupId>org.apache.tomcat</groupId>
-		    <artifactId>tomcat-api</artifactId>
-		    <version>8.5.93</version>
-		</dependency>
-
-	  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	  
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-webmvc</artifactId>

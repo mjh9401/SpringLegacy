@@ -6,15 +6,30 @@
   version="3.1"
   metadata-complete="true">
   
-  <servlet>
-  	<servlet-name>dispatcher</servlet-name>
-  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-  </servlet>
-  <!-- /는 정적파일 X, JSP O, /*는 정적파일 X, JSP X  -->
-  <servlet-mapping>
-  	<servlet-name>dispatcher</servlet-name>
-  	<url-pattern>/</url-pattern>
-  </servlet-mapping>
+	<servlet>
+	  <servlet-name>dispatcher</servlet-name>
+	  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	</servlet>
+  
+  	<!-- /는 정적파일 X, JSP O, /*는 정적파일 X, JSP X  -->
+  	<servlet-mapping>
+  		<servlet-name>dispatcher</servlet-name>
+  		<url-pattern>/</url-pattern>
+  	</servlet-mapping>
+  
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
   
 
 	
